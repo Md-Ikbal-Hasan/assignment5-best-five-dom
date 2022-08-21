@@ -29,3 +29,15 @@ document.getElementById("all-card-container").addEventListener('click', function
         }
     }
 })
+
+
+// commmon function
+function getInputFieldValue(id) {
+    const inputValueField = document.getElementById(id);
+    const inputValue = Number(inputValueField.value);
+    if (inputValue === 0 || inputValue === NaN) {
+        return NaN;
+    }
+    inputValueField.value = '';
+    return inputValue;
+}
