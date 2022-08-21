@@ -1,0 +1,36 @@
+body {
+
+    font-family: 'Berkshire Swash', cursive;
+    font-family: 'Manrope', sans-serif;
+    background-color: #434343
+}
+
+.banner {
+    padding-top: 100px;
+}
+
+.banner-title {
+
+    font-family: 'Berkshire Swash';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    color: #FF5E19;
+}
+
+.card-title {
+    font-size: 24px;
+}
+
+.card-text {
+    color: #B3B3B3;
+    font-size: 16px;
+}
+
+.disabled-button-bg {
+    background: red;
+}
+
+li {
+    margin-bottom: 10px;
+}
