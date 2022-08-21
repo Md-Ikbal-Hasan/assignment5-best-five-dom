@@ -41,3 +41,26 @@ function getInputFieldValue(id) {
     inputValueField.value = '';
     return inputValue;
 }
+
+
+document.getElementById("player-expense-button").addEventListener('click', function () {
+    const perPlayerCost = getInputFieldValue("per-player-cost")
+
+    if (isNaN(perPlayerCost)) {
+        alert("Enter a valid Input");
+        return;
+    }
+
+    let playerList = document.getElementById("player-list");
+    const selectedPlayerList = playerList.querySelectorAll('li');
+    const numberOfSelectedPlayer = selectedPlayerList.length;
+
+    if (numberOfSelectedPlayer < 1) {
+        alert("Select some player first ! ");
+        return;
+    }
+
+    const playerCost = perPlayerCost * numberOfSelectedPlayer;
+    document.getElementById("player-cost").innerText = playerCost;
+
+})
