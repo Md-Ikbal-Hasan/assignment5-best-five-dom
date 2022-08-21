@@ -64,3 +64,20 @@ document.getElementById("player-expense-button").addEventListener('click', funct
     document.getElementById("player-cost").innerText = playerCost;
 
 })
+
+
+document.getElementById("calculate-total-button").addEventListener('click', function () {
+    const managerCost = getInputFieldValue("manager-cost");
+    const coachCost = getInputFieldValue("coach-cost");
+    if (isNaN(managerCost) || isNaN(coachCost)) {
+        alert("Enter a valid Input");
+        return;
+    }
+
+
+    const playerCost = parseInt(document.getElementById("player-cost").innerText);
+    const totalCost = playerCost + managerCost + coachCost;
+    document.getElementById("total-cost").innerText = totalCost;
+
+
+})
